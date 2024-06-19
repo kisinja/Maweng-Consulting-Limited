@@ -13,7 +13,7 @@ const Header = () => {
                     <p className='text-md text-gray-500 tracking-wider'>Welcome to our platform, where you can connect, share, and engage with a vibrant community. Discover exciting content, make new friends, and stay updated with the latest trends. Join us today!</p>
                 </div>
                 <div>
-                    <button className='bg-black text-white text-lg font-semibold px-8 py-2 rounded-md cursor-pointer'>About Us</button>
+                    <a href="#about" className='bg-black text-white text-lg font-semibold px-8 py-2 rounded-md cursor-pointer'>About Us</a>
                 </div>
             </div>
             <div className='w-[300px] h-[200px] absolute right-0 bottom-[30%]'>

@@ -9,6 +9,9 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .roboto-thin {
   font-family: "Roboto", sans-serif;

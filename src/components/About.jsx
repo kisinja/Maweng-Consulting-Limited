@@ -1,7 +1,7 @@
 
 const About = () => {
     return (
-        <section className="py-[40px] px-[5%] relative">
+        <section className="py-[40px] px-[5%] relative" id="about">
             <div className="flex items-center gap-[100px] justify-center">
                 <div className="py-[8%] px-[5%] rounded-lg bg-gray-200 text-left flex flex-col gap-5 w-[50%] h-fit">
                     <h5 className="text-[#62ff00] tracking-wider">WHO WE ARE</h5>
