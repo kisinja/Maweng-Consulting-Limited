@@ -15,7 +15,7 @@ const SingleService = () => {
     const { title, img, desc } = mainService;
 
     useEffect(() => {
-        document.title = `${mainService.title} - MAWENG COUNSULTING SERVICES`;
+        document.title = `${mainService.title} - Maweng Consulting Limited`;
     }, [mainService]);
 
 

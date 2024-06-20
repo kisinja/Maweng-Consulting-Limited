@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
@@ -14,7 +15,9 @@ const NavBar = () => {
     return (
         <nav className="bg-white sticky top-0">
             <div className="logo">
-                <h1 className="font-bold text-3xl">Logo</h1>
+                <Link to="/">
+                    <h1 className="font-bold text-3xl">Logo</h1>
+                </Link>
             </div>
             <div className="col-2-nav">
                 <ul>

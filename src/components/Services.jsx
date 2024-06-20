@@ -14,20 +14,20 @@ const Services = () => {
                     <Link key={index} to={`/service/${service.id}`} title={`Explore ${service.title}`}>
                         <div className='min-w-[300px] h-[300px] bg-gray-100 text-black rounded-lg flex flex-col justify-between mt-3' id="service">
                             <div className='w-full h-[200px]'>
-                                <img src={service.img} alt="" className='w-full h-full object-cover rounded-t-lg border-[5px] border-black hover:border-white' />
+                                <img src={service.img} alt="" className='w-full h-full object-cover rounded-t-lg' />
                             </div>
                             <div className="p-3 bg-[#62ff00] rounded-b-lg hover:bg-black">
-                                <h1 className='text-white font-bold text-lg tracking-wider underline hover:italic transition-all hover:text-black'>
-                                    {service.title}
-                                    <ArrowRight />
-                                </h1>
-                                <p className='tracking-wider text-black hover:text-[#62ff00]'>{service.text}</p>
-                            </div>
+                                <h1 className='text-white font-bold text-lg tracking-wider underline hover:italic transition-all'>
+                                {service.title}
+                                <ArrowRight />
+                            </h1>
+                            <p className='tracking-wider text-black hover:text-[#62ff00]'>{service.text}</p>
                         </div>
+                    </div>
                     </Link>
                 ))}
-            </div>
-        </section>
+        </div>
+        </section >
     )
 }
 

@@ -3,6 +3,7 @@ import About from "../components/About";
 import Services from "../components/Services";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Quote from "../components/Quote";
+import Location from "../components/Location";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Services />
             <WhyChooseUs />
             <Quote />
+            <Location />
         </>
     )
 }
