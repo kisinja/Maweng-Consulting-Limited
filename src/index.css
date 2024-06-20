@@ -91,9 +91,8 @@ nav {
   align-items: center;
   padding: 10px 5%;
   z-index: 10000;
+  box-shadow: 0 4px 2px -2px #62ff0072;
 }
-
-.logo {}
 
 .col-2-nav {
   display: flex;
@@ -126,9 +125,19 @@ nav {
 }
 
 #service {
-  transition: transform .3s;
+  transition: all .3s;
 }
 
 #service:hover {
   transform: translateY(-5px);
+}
+
+#details {
+  padding-right: 30px;
+  border-right: 8px solid #62ff00;
+  border-radius: 30px;
+}
+
+#service-img {
+  border-radius: 30px;
 }
