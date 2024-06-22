@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const About = () => {
     return (
@@ -9,7 +10,9 @@ const About = () => {
                     </h2>
                     <p className="text-gray-500 tracking-wider text-xl">Maweng Consulting Limited is a leading software development company based in Nairobi, specializing in creating cutting-edge solutions for businesses of all sizes.</p>
                     <div>
-                        <button className='bg-[#62ff00] text-lg font-semibold px-8 py-2 rounded-md cursor-pointer'>Read More</button>
+                        <Link to="/about">
+                            <button className='bg-[#62ff00] text-lg font-semibold px-8 py-2 rounded-md cursor-pointer'>Read More</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="w-[50%] h-auto">

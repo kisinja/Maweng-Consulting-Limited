@@ -42,3 +42,30 @@ export const services = [
         desc: "Enhance your online visibility with our SEO optimization services. We create custom strategies that improve your search engine rankings, ensuring optimal reach and engagement with your target audience.Improve your website's visibility and ranking with our SEO optimization services. We implement effective techniques to enhance search engine performance, attract organic traffic, and boost your online presence."
     }
 ];
+
+export const values = [
+    {
+        id: 1,
+        icon: "fa-solid fa-bullseye",
+        title: "Innovation",
+        desc: "We are committed to innovation and creativity, constantly seeking new ways to improve our services and deliver exceptional results to our clients."
+    },
+    {
+        id: 2,
+        icon: "fa-solid fa-lightbulb",
+        title: "Quality",
+        desc: "We prioritize quality in everything we do, ensuring that our solutions meet the highest standards and exceed our clients' expectations."
+    },
+    {
+        id: 3,
+        title: "Integrity",
+        icon: "fa-solid fa-headphones",
+        desc: "We uphold the highest standards of integrity and professionalism in all our interactions, building trust and credibility with our clients and partners."
+    },
+    {
+        id: 4,
+        title: "Collaboration",
+        icon: "fa-solid fa-hands-helping",
+        desc: "We believe in the power of collaboration and teamwork, working closely with our clients to achieve shared goals and deliver successful outcomes."
+    },
+];
