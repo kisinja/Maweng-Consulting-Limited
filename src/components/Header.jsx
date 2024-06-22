@@ -3,7 +3,7 @@ import header2 from '../assets/header-2.svg';
 
 const Header = () => {
     return (
-        <section className='relative py-[30px] px-[5%]'>
+        <section className='relative py-[30px] px-[5%]' id='home'>
             <div className='w-[300px] h-[200px] absolute left-0 top-[30%]'>
                 <img src={header1} alt="illustration" className='w-full h-full object-cover' />
             </div>

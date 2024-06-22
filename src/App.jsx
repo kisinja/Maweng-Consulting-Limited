@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Gallery from "./pages/Gallery";
-import Contact from "./pages/Contact";
 import SingleService from "./pages/SingleService";
 import Footer from "./components/Footer";
 
@@ -17,7 +16,6 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/service/:id" element={<SingleService />} />
       </Routes>
       <Footer />

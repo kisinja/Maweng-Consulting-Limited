@@ -6,6 +6,7 @@ import GetInTouch from "../components/GetInTouch";
 const SingleService = () => {
 
     const location = useLocation();
+    console.log(location);
     const id = location.pathname.split("/")[2];
     console.log(id);
 
@@ -17,7 +18,6 @@ const SingleService = () => {
     useEffect(() => {
         document.title = `${mainService.title} - Maweng Consulting Limited`;
     }, [mainService]);
-
 
     return (
         <section className="py-[50px] px-[5%]">

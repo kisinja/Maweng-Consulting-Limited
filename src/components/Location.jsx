@@ -1,7 +1,7 @@
 
 const Location = () => {
     return (
-        <section className="py-[50px] px-[5%]">
+        <section className="py-[50px] px-[5%]" id="contact">
             <div className="flex justify-between">
                 <div className="w-[550px] flex flex-col gap-5">
                     <h5 className="text-sm tracking-wider text-[#62ff00] font-bold">OUR LOCATION</h5>
