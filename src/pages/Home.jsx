@@ -28,6 +28,7 @@ const Home = () => {
             <WhyChooseUs />
             <Quote />
             <Location />
+
             {isActive && (
                 <div className={`up-btn bg-black w-12 h-12 flex items-center justify-center rounded right-2 bottom-[15%] fixed bg-opacity-75 hover:bg-opacity-90`} title="Back to Top">
                     <a href="#home">
@@ -35,6 +36,7 @@ const Home = () => {
                     </a>
                 </div>
             )}
+            
         </>
     )
 }

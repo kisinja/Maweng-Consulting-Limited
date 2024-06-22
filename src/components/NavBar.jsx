@@ -6,7 +6,8 @@ const NavBar = () => {
     const [isActive, setIsActive] = useState(false);
 
     const handleClick = () => {
-        document.getElementById("nav-links").forEach((link) => {
+        const links = document.getElementById("nav-links");
+        links.forEach((link) => {
             link.classList.toggle("underline");
         });
         setIsActive(!isActive);
@@ -16,7 +17,7 @@ const NavBar = () => {
         <nav className="bg-white sticky top-0">
             <div className="logo">
                 <Link to="/">
-                    <h1 className="font-bold text-3xl">Logo</h1>
+                    <h1 className="font-bold text-2xl text-black"><span>MAWENG</span> <span className="text-green-600">CONSULTING</span></h1>
                 </Link>
             </div>
             <div className="col-2-nav">
