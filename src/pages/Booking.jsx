@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -8,6 +9,8 @@ const Booking = () => {
     const [error, setError] = useState("");
 
     const BASE_URL = "http://localhost:7000";
+
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         service: "",
@@ -49,6 +52,7 @@ const Booking = () => {
             var data = await res.json();
             console.log(data);
             toast.success(data.message);
+            navigate("/thank-you");
         } catch (error) {
             console.error('Error booking appointment:', error.message);
             setError('Failed to book appointment. Please try again later.');
@@ -58,24 +62,26 @@ const Booking = () => {
     };
 
     return (
-        <section className="py-[60px] px-[5%]">
-            <div className="p-4 bg-[#62ff00]">
+        <section className="py-[30px] px-[5%]" id="booking">
+            <div className="p-4 bg-[#62ff00] max-w-[550px] m-auto rounded-lg">
                 <center>
                     <h1 className="text-white text-3xl md:text-4xl font-bold mb-3">Book an Appointment</h1>
                 </center>
                 <form className="rounded-lg bg-white px-4 py-3" onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Service</label>
-                        <input type="text" name="service" className="form-control text-gray-800"
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Date</label>
-                        <input type="date" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            onChange={handleChange}
-                            name="date"
-                        />
+                    <div className="flex justify-between items-center gap-1">
+                        <div className="mb-3 flex-1">
+                            <label htmlFor="exampleInputEmail1" className="form-label">Service</label>
+                            <input type="text" name="service" className="form-control text-gray-800"
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div className="mb-3 flex-1">
+                            <label htmlFor="exampleInputEmail1" className="form-label">Date</label>
+                            <input type="date" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                onChange={handleChange}
+                                name="date"
+                            />
+                        </div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Time</label>
@@ -84,19 +90,21 @@ const Booking = () => {
                             name="time"
                         />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Full Name</label>
-                        <input type="text" className="form-control"
-                            name="fullName"
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            name="email"
-                            onChange={handleChange}
-                        />
+                    <div className="flex justify-between items-center gap-1">
+                        <div className="mb-3">
+                            <label htmlFor="exampleInputEmail1" className="form-label">Full Name</label>
+                            <input type="text" className="form-control"
+                                name="fullName"
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
+                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                name="email"
+                                onChange={handleChange}
+                            />
+                        </div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Phone Number</label>

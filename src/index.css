@@ -170,3 +170,25 @@ nav {
     transform: translate(160%, 0) rotate(1turn)
   }
 }
+
+#booking {
+  background: url(assets/app-bg.jpg), linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconn {
+  width: 100%;
+  color: #62ff00;
+}
