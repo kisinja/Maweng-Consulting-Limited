@@ -28,3 +28,4 @@ vite.config.js
 postcss.config.js
 # Local Netlify folder
 .netlify
+netlify.toml
