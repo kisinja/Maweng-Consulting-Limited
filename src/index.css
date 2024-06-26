@@ -146,3 +146,27 @@ nav {
   cursor: pointer;
   background: linear-gradient(#62ff00, rgba(0, 0, 0, 0.5));
 }
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: inline-grid;
+  width: 80px;
+  aspect-ratio: 2;
+  overflow: hidden;
+  border-image: 1 0/0 0 8px/0 0 8px repeating-linear-gradient(90deg, #fff 0 26%, #67ff00 0 52%);
+}
+
+.loader:before {
+  content: "";
+  margin: 0 25%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#fff 0 60deg, #62ff00 0 120deg);
+  transform: translate(-154%, 0) rotate(0turn);
+  animation: l4 3s linear infinite;
+}
+
+@keyframes l4 {
+  to {
+    transform: translate(160%, 0) rotate(1turn)
+  }
+}

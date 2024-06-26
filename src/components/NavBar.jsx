@@ -28,6 +28,7 @@ const Navbar = () => {
                         <NavLink to="/gallery">Gallery</NavLink>
                         <NavLink to="/contact">Contact</NavLink>
                         <NavLink to="#faq">FAQ{"'"}s</NavLink>
+                        <NavLink to="/book-appointment">Book Appointment</NavLink>
                     </div>
                     <div className="md:hidden flex items-center">
                         <button
@@ -67,6 +68,7 @@ const Navbar = () => {
                         <MobileNavLink to="/portfolio">Portfolio</MobileNavLink>
                         <MobileNavLink to="/gallery">Gallery</MobileNavLink>
                         <MobileNavLink to="/contact">Contact</MobileNavLink>
+                        <MobileNavLink to="/book-appointment">Book Appointment</MobileNavLink>
                         <MobileNavLink to="/faq">FAQ{"'"}s</MobileNavLink>
                     </div>
                 )}

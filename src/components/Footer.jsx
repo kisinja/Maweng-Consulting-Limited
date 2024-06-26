@@ -14,7 +14,7 @@ const Footer = () => {
                         </a>
                     </li>
                     <li className="text-gray-100 tracking-wider">
-                        <a href="" className="text-gray-500 hover:text-white">
+                        <a href="/book-appointment" className="text-gray-500 hover:text-white">
                             Schedule Appointment
                         </a>
                     </li>
