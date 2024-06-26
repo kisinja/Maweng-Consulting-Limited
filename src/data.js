@@ -69,3 +69,22 @@ export const values = [
         desc: "We believe in the power of collaboration and teamwork, working closely with our clients to achieve shared goals and deliver successful outcomes."
     },
 ];
+
+export const questions = [
+    {
+        question: "What technologies do you use for building software solutions?",
+        answer: "We primarily use React.js for frontend development and Node.js for backend, with MongoDB as our database solution.",
+    },
+    {
+        question: "How can I request a quote for my project?",
+        answer: "You can contact us through our contact form or email us directly at info@yourcompany.com. We'll get back to you promptly.",
+    },
+    {
+        question: "Do you provide ongoing support after the project is completed?",
+        answer: "Yes, we offer ongoing support and maintenance services to ensure your software runs smoothly and is up-to-date.",
+    },
+    {
+        question: "Can you customize software solutions according to our specific business needs?",
+        answer: "Absolutely! We specialize in creating custom software solutions tailored to meet the unique requirements of your business.",
+    },
+];

@@ -5,6 +5,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import Quote from "../components/Quote";
 import Location from "../components/Location";
 import { useEffect, useState } from "react";
+import Faqs from "../components/Faqs";
 
 const Home = () => {
 
@@ -27,6 +28,7 @@ const Home = () => {
             <Services />
             <WhyChooseUs />
             <Quote />
+            <Faqs />
             <Location />
 
             {isActive && (
@@ -36,7 +38,7 @@ const Home = () => {
                     </a>
                 </div>
             )}
-            
+
         </>
     )
 }

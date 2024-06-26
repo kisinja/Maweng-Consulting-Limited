@@ -32,6 +32,7 @@ const NavBar = () => {
                             <li><a href="/portfolio" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Portfolio</a></li>
                             <li><a href="/gallery" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Gallery</a></li>
                             <li><a href="#contact" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Contact</a></li>
+                            <li><a href="#faqs" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>FAQ{"'"}s</a></li>
                         </ul>
                         <div className="ml-4">
                             <a href="/" className="get-app-btn">Get App</a>
