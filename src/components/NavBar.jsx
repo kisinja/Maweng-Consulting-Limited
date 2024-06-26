@@ -13,7 +13,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white p-4 sticky top-0 z-[100000]">
+        <nav className="bg-white py-[20px] px-[5%] sticky top-0 z-[100000]">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">

@@ -1,9 +1,11 @@
 import { useState } from "react";
-import Loader from "../components/Loader";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Booking = () => {
 
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
     const BASE_URL = "http://localhost:7000";
 
@@ -29,6 +31,8 @@ const Booking = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+        setError("");
+
         try {
             const res = await fetch(`${BASE_URL}/book-appointment`, {
                 method: 'POST',
@@ -37,11 +41,19 @@ const Booking = () => {
                 },
                 body: JSON.stringify(formData)
             });
-            setLoading(false);
-            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error("Network response was not ok");
+            }
+
+            var data = await res.json();
             console.log(data);
+            toast.success(data.message);
         } catch (error) {
-            console.log(error.message);
+            console.error('Error booking appointment:', error.message);
+            setError('Failed to book appointment. Please try again later.');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -99,14 +111,26 @@ const Booking = () => {
                     </div>
 
 
+                    <div>
+                        {error && <div className="text-red-500 text-center bg-white p-1 rounded-lg text-lg">{error}</div>}
+                    </div>
                     <div className="text-center">
-                        {loading ? <Loader /> : (
-                            <button type="submit" className="btn bg-black hover:bg-white hover:text-black hover:border-2 hover:border-[#62ff00] py-2 px-6 rounded-lg text-white">
-                                Book Appointment
-                            </button>
-                        )}
+                        <button type="submit" className="btn bg-black hover:bg-white hover:text-black hover:border-2 hover:border-[#62ff00] py-2 px-6 rounded-lg text-white">
+                            {loading ? "Booking..." : "Book Appointment"}
+                        </button>
                     </div>
                 </form>
+                <ToastContainer
+                    position="bottom-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
         </section>
     );
