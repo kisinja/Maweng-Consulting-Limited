@@ -1,71 +1,78 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+// components/Navbar.js
 
-const NavBar = () => {
+import { useState } from 'react';
+import { Link } from 'react-router-dom'; // Assuming you are using React Router for navigation
+import MobileNavLink from './MobileNavLink';
+import NavLink from './NavLink';
 
-    const [isActive, setIsActive] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+const Navbar = () => {
+    var [isOpen, setIsOpen] = useState(false);
 
-    const handleClick = () => {
-        const links = document.getElementById("nav-links");
-        links.forEach((link) => {
-            link.classList.toggle("underline");
-        });
-        setIsActive(!isActive);
+    var toggleNavbar = () => {
+        setIsOpen(!isOpen);
     };
 
     return (
-        <nav className="bg-white sticky top-0">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between w-full h-16">
-                    <div className="flex-shrink-0">
-                        <Link to="/">
-                            <h1 className="font-bold text-2xl text-black">
-                                <span>MAWENG</span> <span className="text-green-600">CONSULTING</span>
-                            </h1>
+        <nav className="bg-white p-4 sticky top-0 z-[100000]">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="flex justify-between items-center">
+                    <div className="flex items-center">
+                        <Link to="/" className="text-black text-xl font-bold">
+                            MAWENG CONSULTING
                         </Link>
                     </div>
-                    <div className="hidden md:flex md:items-center md:space-x-4">
-                        <ul className="flex space-x-4">
-                            <li><a href="/" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Home</a></li>
-                            <li><a href="/about" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>About</a></li>
-                            <li><a href="/portfolio" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Portfolio</a></li>
-                            <li><a href="/gallery" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Gallery</a></li>
-                            <li><a href="#contact" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Contact</a></li>
-                            <li><a href="#faqs" className={`roboto-regular text-lg ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>FAQ{"'"}s</a></li>
-                        </ul>
-                        <div className="ml-4">
-                            <a href="/" className="get-app-btn">Get App</a>
-                        </div>
+                    <div className="hidden md:flex space-x-4">
+                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/portfolio">Portfolio</NavLink>
+                        <NavLink to="/gallery">Gallery</NavLink>
+                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink to="#faq">FAQ{"'"}s</NavLink>
                     </div>
                     <div className="md:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-black hover:text-green-600 focus:outline-none focus:text-green-600">
-                            <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <button
+                            onClick={toggleNavbar}
+                            className="text-white focus:outline-none focus:text-white"
+                        >
+                            <svg
+                                className="h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="black"
+                            >
                                 {isOpen ? (
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M6 18L18 6M6 6l12 12" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
                                 ) : (
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M4 5h16M4 12h16m-7 7h7" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h16M4 18h16"
+                                    />
                                 )}
                             </svg>
                         </button>
                     </div>
                 </div>
+                {/* Mobile Menu */}
+                {isOpen && (
+                    <div className="md:hidden mt-2">
+                        <MobileNavLink to="/">Home</MobileNavLink>
+                        <MobileNavLink to="/about">About</MobileNavLink>
+                        <MobileNavLink to="/portfolio">Portfolio</MobileNavLink>
+                        <MobileNavLink to="/gallery">Gallery</MobileNavLink>
+                        <MobileNavLink to="/contact">Contact</MobileNavLink>
+                        <MobileNavLink to="/faq">FAQ{"'"}s</MobileNavLink>
+                    </div>
+                )}
             </div>
-
-            {isOpen && (
-                <div className="md:hidden">
-                    <ul className="space-y-4 px-2 pt-2 pb-3">
-                        <li><a href="/" className={`roboto-regular text-lg block ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Home</a></li>
-                        <li><a href="/about" className={`roboto-regular text-lg block ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>About</a></li>
-                        <li><a href="/portfolio" className={`roboto-regular text-lg block ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Portfolio</a></li>
-                        <li><a href="/gallery" className={`roboto-regular text-lg block ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Gallery</a></li>
-                        <li><a href="#contact" className={`roboto-regular text-lg block ${isActive ? 'underline' : ''}`} id="nav-links" onClick={handleClick}>Contact</a></li>
-                        <li><a href="/" className="get-app-btn block">Get App</a></li>
-                    </ul>
-                </div>
-            )}
         </nav>
     );
 };
 
-export default NavBar;
+export default Navbar;
