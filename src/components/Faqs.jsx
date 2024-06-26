@@ -27,12 +27,12 @@ const Faqs = () => {
                             className="flex justify-between items-center cursor-pointer"
                             onClick={() => toggleFAQ(index)}
                         >
-                            <h3 className="text-xl font-semibold">{faq.question}</h3>
+                            <h3 className="text-xl tracking-wider">{faq.question}</h3>
                             <span className={faq.open ? "transform rotate-180 transition duration-300" : "transform transition duration-300"}>&#x2B;</span>
                         </div>
                         {faq.open && (
-                            <div className='p-1 rounded-lg bg-white'>
-                                <p className="text-md mt-2 text-[#62ff00]">{faq.answer}</p>
+                            <div className='py-[10px] px-[30px] rounded-lg bg-white'>
+                                <p className="text-sm font-semibold mt-2 text-[#000] tracking-wider">{faq.answer}</p>
                             </div>
                         )}
                     </div>

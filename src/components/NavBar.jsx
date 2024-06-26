@@ -17,11 +17,11 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">
-                        <Link to="/" className="text-black text-xl font-bold">
-                            MAWENG CONSULTING
+                        <Link to="/" className="text-black text-xl font-bold bg-[#67ff00] p-1 rounded">
+                            LOGO HERE
                         </Link>
                     </div>
-                    <div className="hidden md:flex space-x-4">
+                    <div className="hidden md:flex md:ml-[40px] space-x-[10px]">
                         <NavLink to="/">Home</NavLink>
                         <NavLink to="/about">About</NavLink>
                         <NavLink to="/portfolio">Portfolio</NavLink>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <NavLink to="#faq">FAQ{"'"}s</NavLink>
                         <NavLink to="/book-appointment">Book Appointment</NavLink>
                     </div>
-                    <div className="md:hidden flex items-center">
+                    <div className={`md:hidden flex items-center absolute right-[5%]`}>
                         <button
                             onClick={toggleNavbar}
                             className="text-white focus:outline-none focus:text-white"

@@ -4,7 +4,7 @@ const NavLink = ({ to, children }) => {
     return (
         <Link
             to={to}
-            className="text-black hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+            className="text-black hover:bg-[#62ff00] px-3 py-2 hover:text-white rounded-md text-lg "
         >
             {children}
         </Link>

@@ -172,7 +172,7 @@ nav {
 }
 
 #booking {
-  background: url(assets/app-bg.jpg), linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  background: linear-gradient(#66ff0084, rgba(0, 0, 0, 0.5)), url(assets/app-bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -186,9 +186,4 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.iconn {
-  width: 100%;
-  color: #62ff00;
 }
