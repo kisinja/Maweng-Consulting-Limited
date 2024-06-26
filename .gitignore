@@ -29,3 +29,4 @@ postcss.config.js
 # Local Netlify folder
 .netlify
 netlify.toml
+.vercel
